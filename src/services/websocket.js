@@ -6,7 +6,7 @@ export default class WebSocketServices {
         this.token = localStorage.getItem("scopedToken");
         this.userId = localStorage.getItem("userId");
         this.engine = engine;
-        this.socket = socketIOClient(`http://localhost:3333?token=${this.token}&userId=${this.userId}&projectId=${this.projectId}`, {
+        this.socket = socketIOClient(`http://200.135.57.16:3333?token=${this.token}&userId=${this.userId}&projectId=${this.projectId}`, {
             reconnectionAttempts: 5,
         });
         this.startWebSocket();
