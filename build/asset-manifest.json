@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/static/css/main.7033a669.css",
-    "main.js": "/static/js/main.1f035a4a.js",
+    "main.js": "/static/js/main.f5b6330b.js",
     "static/media/clouds.png": "/static/media/clouds.666706fdd457694d000a.png",
     "static/media/deviceBackground.png": "/static/media/deviceBackground.ffd24a721eb0d1a6284c.png",
     "static/media/logo_ifcloud.png": "/static/media/logo_ifcloud.7a7b399125aa140d7509.png",
     "index.html": "/index.html",
     "main.7033a669.css.map": "/static/css/main.7033a669.css.map",
-    "main.1f035a4a.js.map": "/static/js/main.1f035a4a.js.map"
+    "main.f5b6330b.js.map": "/static/js/main.f5b6330b.js.map"
   },
   "entrypoints": [
     "static/css/main.7033a669.css",
-    "static/js/main.1f035a4a.js"
+    "static/js/main.f5b6330b.js"
   ]
 }
