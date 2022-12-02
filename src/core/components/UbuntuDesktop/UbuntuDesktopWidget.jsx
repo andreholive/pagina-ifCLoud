@@ -44,7 +44,7 @@ const UbuntuDesktopWidget = props => {
       ))}
       </PortsSlot>
       <Tooltip id="cirros" globalEventOff="click"/>
-      <DesktopIcon data-for="cirros" data-place="bottom" data-tip="ok" size={145} status={model.status} />
+      <DesktopIcon status={model.status} size={120}/>
     </div>
   );
 };
