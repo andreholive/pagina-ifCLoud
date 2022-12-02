@@ -8,8 +8,8 @@ export default function Router() {
     return (
         <BrowserRouter>
             <Routes>
-                <Route element = {<Logon/>}  path="/" exact />
-                <Route element = {<Main/>}  path="/project" />
+                <Route element = {<Logon/>} basename="/"  path="/" exact />
+                <Route element = {<Main/>}  basename="/project" path="/project" />
             </Routes>
         </BrowserRouter>
     )

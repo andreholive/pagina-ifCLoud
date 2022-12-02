@@ -39,41 +39,30 @@
     </style>
 
     <script type="module" crossorigin="anonymous">
-        // RFB holds the API to connect and communicate with a VNC server
-        //opt/stack/novnc
+        
         import RFB from './core/rfb.js';
 
         let rfb;
         let desktopName;
 
-        // When this function is called we have
-        // successfully connected to a server
+        
         function connectedToServer(e) {
             
         }
 
-        // This function is called when we are disconnected
         function disconnectedFromServer(e) {
             window.close();
         }
 
-        // When this function is called, the server requires
-        // credentials to authenticate
         function credentialsAreRequired(e) {
             const password = prompt("Password Required:");
             rfb.sendCredentials({ password: password });
         }
 
-        // When this function is called we have received
-        // a desktop name from the server
         function updateDesktopName(e) {
-            console.log(e)
             desktopName = e.detail.name;
         }
 
-        // Since most operating systems will catch Ctrl+Alt+Del
-        // before they get a chance to be intercepted by the browser,
-        // we provide a way to emulate this key sequence.
         function sendCtrlAltDel() {
             rfb.sendCtrlAltDel();
             return false;
@@ -92,8 +81,7 @@
         }
         document.getElementById('sendCtrlAltDelButton')
             .onclick = sendCtrlAltDel;
-        // Read parameters specified in the URL query string
-        // By default, use the host and port of server that served this file
+        
         const host = readQueryVariable('host', window.location.hostname);
         let port = readQueryVariable('port', window.location.port);
         const password = readQueryVariable('password');
@@ -112,17 +100,14 @@
         }
         url += '/' + path;
 
-        // Creating a new RFB object will start a new connection
         rfb = new RFB(document.getElementById('screen'), url,
                       { credentials: { password: password } });
 
-        // Add listeners to important events from the RFB module
         rfb.addEventListener("connect",  connectedToServer);
         rfb.addEventListener("disconnect", disconnectedFromServer);
         rfb.addEventListener("credentialsrequired", credentialsAreRequired);
         rfb.addEventListener("desktopname", updateDesktopName);
 
-        // Set parameters that can be changed on an active connection
         rfb.viewOnly = readQueryVariable('view_only', false);
         rfb.scaleViewport = readQueryVariable('scale', false);
     </script>
