@@ -3,7 +3,7 @@ import Tooltip from 'react-tooltip';
 import './host.css'
 import styled from 'styled-components';
 import { distributePorts } from '../portExtendUtils';
-import ServerIcon from '../../deviceIcons/ServerIcon';
+import DesktopIcon from '../../deviceIcons/DesktopIcon';
 
 const PortsSlot = styled.div`
   position: absolute;
@@ -44,7 +44,7 @@ const UbuntuDesktopWidget = props => {
       ))}
       </PortsSlot>
       <Tooltip id="cirros" globalEventOff="click"/>
-      <ServerIcon data-for="cirros" data-place="bottom" data-tip="ok" size={145} status={model.status} />
+      <DesktopIcon data-for="cirros" data-place="bottom" data-tip="ok" size={145} status={model.status} />
     </div>
   );
 };
