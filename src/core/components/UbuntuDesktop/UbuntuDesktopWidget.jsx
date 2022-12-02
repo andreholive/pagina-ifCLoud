@@ -7,8 +7,8 @@ import DesktopIcon from '../../deviceIcons/DesktopIcon';
 
 const PortsSlot = styled.div`
   position: absolute;
-  top: 34px;
-  right: 63px;
+  bottom: 33px;
+  right: 27px;
   display: flex;
   justify-content: center;
   align-items: center;
